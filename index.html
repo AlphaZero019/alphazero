@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- METADATOS SEO Y SOCIAL MEDIA -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpha Zero | Soporte Técnico Remoto y Soluciones Tecnológicas</title>
+    <meta name="description" content="Resolvemos tus problemas tecnológicos sin que salgas de casa. Soporte técnico remoto, optimización de sistemas y soluciones digitales profesionales.">
+    <meta name="keywords" content="soporte técnico remoto, optimización windows, soporte TI, Alpha Zero, mantenimiento pc">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#050508">
+    <link rel="canonical" href="https://alphazero.com">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Alpha Zero | Soluciones Tecnológicas Remotas">
+    <meta property="og:description" content="Resolvemos tus problemas tecnológicos en tiempo récord y sin salir de casa.">
+    <meta property="og:image" content="LogoHighres.png">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Alpha Zero | Soluciones Tecnológicas">
+    <meta name="twitter:description" content="Soporte técnico remoto, rápido y profesional.">
+    <meta name="twitter:image" content="LogoHighres.png">
+
+    <!-- Preload para Carga Rápida -->
+    <link rel="preload" href="LogoHighres.png" as="image">
+
+    <style>
+      /* SCROLL Y REGLAS GENERALES */
+      html {
+        scroll-behavior: smooth;
+        box-sizing: border-box;
+      }
+
+      *, *:before, *:after {
+        box-sizing: inherit;
+      }
+
+      body {
+        background-color: #050508;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        color: #ffffff;
+        padding: 0;
+        margin: 0;
+        line-height: 1.5;
+        overflow-x: hidden;
+      }
+
+      /* NAVBAR PREMIUM CON BLUR */
+      header {
+        padding: 20px 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(11, 11, 15, 0.85);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(26, 26, 36, 0.7);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        transition: padding 0.25s ease, background-color 0.25s ease;
+      }
+
+      header.scrolled {
+        padding: 12px 50px;
+        background-color: rgba(5, 5, 8, 0.95);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+      }
+
+      .logo-texto {
+        font-weight: 700;
+        font-size: 22px;
+        color: #a855f7;
+        letter-spacing: 2px;
+        text-decoration: none;
+        transition: opacity 0.25s ease;
+      }
+
+      .logo-texto:hover {
+        opacity: 0.85;
+      }
+
+      .menu-enlaces {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        gap: 25px;
+      }
+
+      .menu-enlaces a {
+        color: #9ca3af;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 14px;
+        transition: color 0.25s ease;
+      }
+
+      .menu-enlaces a:hover {
+        color: #a855f7;
+      }
+
+      /* MENÚ HAMBURGUESA MÓVIL */
+      .menu-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        padding: 5px;
+      }
+
+      .menu-toggle span {
+        width: 25px;
+        height: 2px;
+        background-color: #ffffff;
+        transition: 0.25s ease;
+      }
+
+      /* HERO ANIMADO & INDICADOR DE DISPONIBILIDAD */
+      .hero-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1100px;
+        margin: 60px auto 100px auto;
+        padding: 0 20px;
+        gap: 40px;
+        animation: heroFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+
+      @keyframes heroFadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(15px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .badge-disponibilidad {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background-color: rgba(34, 197, 94, 0.1);
+        border: 1px solid rgba(34, 197, 94, 0.25);
+        padding: 6px 14px;
+        border-radius: 20px;
+        font-size: 13px;
+        color: #4ade80;
+        font-weight: 500;
+        margin-bottom: 20px;
+      }
+
+      .puntos-pulsante {
+        width: 8px;
+        height: 8px;
+        background-color: #22c55e;
+        border-radius: 50%;
+        box-shadow: 0 0 8px #22c55e;
+        animation: pulsoVerde 2s infinite;
+      }
+
+      @keyframes pulsoVerde {
+        0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+        70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(34, 197, 94, 0); }
+        100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+      }
+
+      .info-marca {
+        max-width: 55%;
+      }
+
+      h1 {
+        font-size: 42px;
+        margin: 0 0 20px 0;
+        letter-spacing: -0.5px;
+        line-height: 1.2;
+        font-weight: 700;
+      }
+
+      .resaltado {
+        color: #a855f7;
+        text-shadow: 0 0 12px rgba(168, 85, 247, 0.25);
+      }
+
+      p {
+        font-size: 16px;
+        color: #9ca3af;
+        line-height: 1.6;
+        margin: 0 0 28px 0;
+      }
+
+      .contenedor-botones {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+      }
+
+      .btn-primario, .btn-secundario, .btn-whatsapp, .btn-enviar {
+        padding: 12px 26px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 14px;
+        display: inline-block;
+        transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background-color 0.25s ease;
+        cursor: pointer;
+        border: none;
+        text-align: center;
+      }
+
+      .btn-primario, .btn-enviar {
+        background-color: #a855f7;
+        color: #ffffff;
+      }
+
+      .btn-primario:hover, .btn-enviar:hover {
+        transform: translateY(-2px);
+        background-color: #c084fc;
+        box-shadow: 0 4px 15px rgba(168, 85, 247, 0.35);
+      }
+
+      .btn-secundario {
+        background-color: transparent;
+        color: #ffffff;
+        border: 1px solid #1a1a24;
+      }
+
+      .btn-secundario:hover {
+        transform: translateY(-2px);
+        border-color: #a855f7;
+        color: #a855f7;
+        box-shadow: 0 4px 15px rgba(168, 85, 247, 0.15);
+      }
+
+      .btn-whatsapp {
+        background-color: #25D366;
+        color: #ffffff;
+      }
+
+      .btn-whatsapp:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+      }
+
+      .logo-hero {
+        max-width: 38%;
+        height: auto;
+        object-fit: contain;
+        border: 1px solid rgba(168, 85, 247, 0.4);
+        border-radius: 14px;
+        box-shadow: 0 0 25px rgba(168, 85, 247, 0.2);
+        padding: 12px;
+        background-color: #0b0b0f;
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+      }
+
+      .logo-hero:hover {
+        transform: scale(1.02);
+        box-shadow: 0 0 35px rgba(168, 85, 247, 0.35);
+      }
+
+      .seccion-contenedor {
+        max-width: 1100px;
+        margin: 100px auto;
+        padding: 0 20px;
+        text-align: center;
+      }
+
+      .titulo-seccion {
+        font-size: 30px;
+        margin: 0 0 10px 0;
+        color: #ffffff;
+        letter-spacing: -0.5px;
+      }
+
+      .subtitulo-seccion {
+        color: #6b7280;
+        font-size: 15px;
+        margin: 0 auto 35px auto;
+        max-width: 650px;
+      }
+
+      .imagen-banner-seccion {
+        width: 100%;
+        max-width: 850px;
+        max-height: 200px;
+        object-fit: contain;
+        border-radius: 12px;
+        border: 1px solid rgba(168, 85, 247, 0.25);
+        box-shadow: 0 0 20px rgba(168, 85, 247, 0.1);
+        margin: 0 auto 30px auto;
+        display: block;
+        transition: border-color 0.25s ease, box-shadow 0.25s ease;
+      }
+
+      .imagen-banner-seccion:hover {
+        border-color: rgba(168, 85, 247, 0.6);
+        box-shadow: 0 0 25px rgba(168, 85, 247, 0.25);
+      }
+
+      .grid-servicios-html {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 15px;
+      }
+
+      .contenedor-proceso-html {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 15px;
+      }
+
+      .tarjeta-html, .paso-proceso-card {
+        background: #0b0b0f;
+        border: 1px solid rgba(168, 85, 247, 0.2);
+        border-radius: 14px;
+        padding: 20px 14px;
+        text-align: center;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+      }
+
+      .tarjeta-html:hover, .paso-proceso-card:hover {
+        transform: scale(1.02) translateY(-3px);
+        border-color: rgba(168, 85, 247, 0.8);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6), 0 0 15px rgba(168, 85, 247, 0.25);
+      }
+
+      .tarjeta-html h3, .paso-proceso-card h4 {
+        font-size: 14px;
+        color: #ffffff;
+        margin: 0 0 8px 0;
+        font-weight: 600;
+      }
+
+      .paso-proceso-card h4 {
+        color: #a855f7;
+      }
+
+      .tarjeta-html p, .paso-proceso-card p {
+        font-size: 12px;
+        color: #9ca3af;
+        margin: 0;
+        line-height: 1.4;
+      }
+
+      /* HERRAMIENTAS QUE DOMINAMOS */
+      .grid-herramientas {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+
+      .tarjeta-herramienta {
+        background: #0b0b0f;
+        border: 1px solid rgba(168, 85, 247, 0.2);
+        border-radius: 14px;
+        padding: 25px 18px;
+        text-align: center;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .tarjeta-herramienta:hover {
+        transform: scale(1.02) translateY(-3px);
+        border-color: rgba(168, 85, 247, 0.8);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6), 0 0 18px rgba(168, 85, 247, 0.3);
+      }
+
+      .ilustracion-herramienta {
+        width: 70px;
+        height: 70px;
+        object-fit: contain;
+        margin-bottom: 16px;
+        filter: drop-shadow(0 0 10px rgba(168, 85, 247, 0.3));
+        transition: transform 0.25s ease, filter 0.25s ease;
+      }
+
+      .tarjeta-herramienta:hover .ilustracion-herramienta {
+        transform: scale(1.05);
+        filter: drop-shadow(0 0 15px rgba(168, 85, 247, 0.5));
+      }
+
+      .tarjeta-herramienta h3 {
+        font-size: 16px;
+        color: #ffffff;
+        margin: 0 0 10px 0;
+        font-weight: 600;
+        letter-spacing: -0.3px;
+      }
+
+      .tarjeta-herramienta p {
+        font-size: 13px;
+        color: #9ca3af;
+        margin: 0;
+        line-height: 1.45;
+      }
+
+      /* TARJETA / BANNER DE DESCARGA RUSTDESK */
+      .banner-descarga-remota {
+        background: linear-gradient(135deg, #0b0b0f 0%, #110d18 100%);
+        border: 1px solid rgba(168, 85, 247, 0.35);
+        border-radius: 16px;
+        padding: 30px;
+        margin-bottom: 35px;
+        text-align: center;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), 0 0 15px rgba(168, 85, 247, 0.1);
+        transition: border-color 0.25s ease, box-shadow 0.25s ease;
+      }
+
+      .banner-descarga-remota:hover {
+        border-color: rgba(168, 85, 247, 0.7);
+        box-shadow: 0 6px 25px rgba(0, 0, 0, 0.6), 0 0 22px rgba(168, 85, 247, 0.25);
+      }
+
+      .banner-descarga-remota h3 {
+        font-size: 20px;
+        color: #ffffff;
+        margin: 0 0 8px 0;
+      }
+
+      .banner-descarga-remota p {
+        font-size: 14px;
+        color: #9ca3af;
+        margin: 0 0 18px 0;
+      }
+
+      .enlace-descarga {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: #a855f7;
+        font-weight: 700;
+        font-size: 15px;
+        text-decoration: none;
+        border: 1px solid rgba(168, 85, 247, 0.4);
+        padding: 10px 22px;
+        border-radius: 8px;
+        background-color: rgba(168, 85, 247, 0.08);
+        transition: all 0.25s ease;
+      }
+
+      .enlace-descarga:hover {
+        color: #ffffff;
+        background-color: #a855f7;
+        border-color: #a855f7;
+        box-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
+        transform: translateY(-2px);
+      }
+
+      /* POR QUÉ ELEGIRNOS */
+      .grid-ventajas {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+
+      .tarjeta-ventaja {
+        background-color: #0b0b0f;
+        border: 1px solid #1a1a24;
+        border-radius: 12px;
+        padding: 24px;
+        text-align: left;
+        transition: transform 0.25s ease, border-color 0.25s ease;
+      }
+
+      .tarjeta-ventaja:hover {
+        transform: scale(1.02) translateY(-2px);
+        border-color: rgba(168, 85, 247, 0.4);
+      }
+
+      .tarjeta-ventaja h3 {
+        color: #ffffff;
+        font-size: 16px;
+        margin: 0 0 10px 0;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .tarjeta-ventaja h3::before {
+        content: "✦";
+        color: #a855f7;
+      }
+
+      .tarjeta-ventaja p {
+        font-size: 13px;
+        color: #9ca3af;
+        margin: 0;
+      }
+
+      /* CONTACTO */
+      .seccion-contacto {
+        max-width: 600px;
+        margin: 100px auto;
+        padding: 0 20px;
+        text-align: center;
+      }
+
+      .botones-contacto-rapido {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+      }
+
+      .formulario-contacto {
+        background-color: #0b0b0f;
+        border: 1px solid #1a1a24;
+        border-radius: 14px;
+        padding: 35px;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        text-align: left;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+      }
+
+      .grupo-input {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .grupo-input label {
+        font-size: 13px;
+        color: #9ca3af;
+        font-weight: 500;
+      }
+
+      .grupo-input input, .grupo-input textarea {
+        background-color: #050508;
+        border: 1px solid #1a1a24;
+        border-radius: 8px;
+        padding: 12px;
+        color: #ffffff;
+        font-family: inherit;
+        font-size: 14px;
+        transition: border-color 0.25s ease, box-shadow 0.25s ease;
+      }
+
+      .grupo-input textarea {
+        resize: none;
+      }
+
+      .grupo-input input:focus, .grupo-input textarea:focus {
+        border-color: #a855f7;
+        outline: none;
+        box-shadow: 0 0 10px rgba(168, 85, 247, 0.2);
+      }
+
+      /* FOOTER */
+      .pie-pagina {
+        background-color: #030305;
+        border-top: 1px solid #1a1a24;
+        padding: 40px 20px;
+        text-align: center;
+        width: 100%;
+      }
+
+      .links-footer {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        margin-bottom: 20px;
+      }
+
+      .links-footer a {
+        color: #9ca3af;
+        text-decoration: none;
+        font-size: 13px;
+        transition: color 0.25s ease;
+      }
+
+      .links-footer a:hover {
+        color: #a855f7;
+      }
+
+      .lema-footer {
+        color: #a855f7;
+        font-weight: 600;
+        font-size: 14px;
+        margin-bottom: 12px;
+      }
+
+      .contenido-footer p {
+        margin: 0;
+        font-size: 12px;
+        color: #4b5563;
+      }
+
+      /* RESPONSIVE DESIGN */
+      @media (max-width: 1024px) {
+        .grid-servicios-html {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        .grid-herramientas {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .contenedor-proceso-html {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      @media (max-width: 768px) {
+        header {
+          padding: 15px 20px;
+        }
+
+        .menu-toggle {
+          display: flex;
+        }
+
+        .menu-enlaces {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          background-color: #0b0b0f;
+          flex-direction: column;
+          padding: 20px;
+          gap: 15px;
+          border-bottom: 1px solid #1a1a24;
+        }
+
+        .menu-enlaces.active {
+          display: flex;
+        }
+
+        .hero-container {
+          flex-direction: column-reverse;
+          margin: 30px auto 60px auto;
+          text-align: center;
+        }
+
+        .info-marca {
+          max-width: 100%;
+        }
+
+        .contenedor-botones {
+          flex-direction: column;
+          width: 100%;
+        }
+
+        .btn-primario, .btn-secundario {
+          width: 100%;
+        }
+
+        .logo-hero {
+          max-width: 65%;
+        }
+
+        .grid-servicios-html, .grid-herramientas, .contenedor-proceso-html, .grid-ventajas {
+          grid-template-columns: 1fr;
+        }
+
+        .seccion-contenedor {
+          margin: 60px auto;
+        }
+      }
+    </style>
+  </head>
+  
+  <body>
+
+    <!-- NAVBAR -->
+    <header id="navbar">
+      <a href="#" class="logo-texto" aria-label="Alpha Zero Inicio">ALPHA ZERO</a>
+      
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú de navegación">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav>
+        <ul class="menu-enlaces" id="menuEnlaces">
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#herramientas">Herramientas</a></li>
+          <li><a href="#proceso">¿Cómo trabajamos?</a></li>
+          <li><a href="#ventajas">¿Por qué elegirnos?</a></li>
+          <li><a href="#recursos">Recursos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HERO PRINCIPAL -->
+      <section class="hero-container">
+        <div class="info-marca">
+          
+          <div class="badge-disponibilidad" title="Estado de soporte técnico remoto">
+            <span class="puntos-pulsante"></span>
+            Disponible para soporte remoto inmediato
+          </div>
+
+          <h1>Resolvemos tus problemas tecnológicos <span class="resaltado">sin que tengas que salir de casa</span></h1>
+          <p>Soporte técnico remoto, optimización avanzada de equipos y soluciones digitales personalizadas para mantener tu ritmo sin interrupciones.</p>
+          
+          <div class="contenedor-botones">
+            <a href="#contacto" class="btn-primario" title="Ir a la sección de contacto">Solicitar soporte</a>
+            <a href="#servicios" class="btn-secundario" title="Ver catálogo de servicios">Ver servicios</a>
+          </div>
+        </div>
+
+        <img class="logo-hero" src="LogoHighres.png" alt="Logotipo oficial de Alpha Zero" loading="eager" width="400" height="400">
+      </section>
+
+      <!-- SECCIÓN DE SERVICIOS -->
+      <section id="servicios" class="seccion-contenedor">
+        <h2 class="titulo-seccion">Nuestros Servicios</h2>
+        <p class="subtitulo-seccion">Tecnología de vanguardia para solucionar tus problemas digitales cotidianos.</p>
+        
+        <img src="AZProcesos.png" alt="Ilustración visual de servicios técnicos de Alpha Zero" class="imagen-banner-seccion" loading="lazy">
+
+        <div class="grid-servicios-html">
+          <article class="tarjeta-html">
+            <h3>Soporte Técnico Remoto</h3>
+            <p>Diagnóstico y resolución de fallas en tiempo real de forma segura.</p>
+          </article>
+
+          <article class="tarjeta-html">
+            <h3>Optimización de Windows</h3>
+            <p>Aceleración de sistema y limpieza profunda para máxima velocidad.</p>
+          </article>
+
+          <article class="tarjeta-html">
+            <h3>Instalación de Software</h3>
+            <p>Configuración e instalación garantizada de programas y licencias.</p>
+          </article>
+
+          <article class="tarjeta-html">
+            <h3>Automatización con Excel</h3>
+            <p>Creación de macros y dashboards para ahorrar horas de trabajo.</p>
+          </article>
+
+          <article class="tarjeta-html">
+            <h3>Desarrollo Web</h3>
+            <p>Sitios web modernos, veloces y enfocados en proyectar profesionalismo.</p>
+          </article>
+
+          <article class="tarjeta-html">
+            <h3>Soluciones con IA</h3>
+            <p>Implementación de herramientas de Inteligencia Artificial avanzadas.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- SECCIÓN: HERRAMIENTAS QUE DOMINAMOS -->
+      <section id="herramientas" class="seccion-contenedor">
+        <h2 class="titulo-seccion">Herramientas que Dominamos</h2>
+        <p class="subtitulo-seccion">Experiencia y soporte técnico especializado en el software más importante de tu día a día.</p>
+
+        <div class="grid-herramientas">
+          
+          <!-- WINDOWS -->
+          <article class="tarjeta-herramienta">
+            <img src="AZWindows.png" alt="Ilustración futurista de sistema Windows Alpha Zero" class="ilustracion-herramienta" loading="lazy">
+            <h3>Windows</h3>
+            <p>Optimización, reparación y configuración del sistema operativo.</p>
+          </article>
+
+          <!-- MICROSOFT OFFICE -->
+          <article class="tarjeta-herramienta">
+            <img src="AZOffice.png" alt="Ilustración holográfica de suite Office Alpha Zero" class="ilustracion-herramienta" loading="lazy">
+            <h3>Microsoft Office</h3>
+            <p>Instalación, configuración y solución de problemas de Office.</p>
+          </article>
+
+          <!-- MICROSOFT EXCEL -->
+          <article class="tarjeta-herramienta">
+            <img src="AZExcel.png" alt="Ilustración holográfica de hoja de cálculo Excel Alpha Zero" class="ilustracion-herramienta" loading="lazy">
+            <h3>Microsoft Excel</h3>
+            <p>Automatización, plantillas y optimización de procesos.</p>
+          </article>
+
+          <!-- OUTLOOK -->
+          <article class="tarjeta-herramienta">
+            <img src="AZOutlook.png" alt="Ilustración de correo futurista Outlook Alpha Zero" class="ilustracion-herramienta" loading="lazy">
+            <h3>Outlook</h3>
+            <p>Configuración de cuentas, sincronización y solución de errores.</p>
+          </article>
+
+          <!-- AUTOCAD -->
+          <article class="tarjeta-herramienta">
+            <img src="AZAutoCAD.png" alt="Ilustración de planos técnicos AutoCAD Alpha Zero" class="ilustracion-herramienta" loading="lazy">
+            <h3>AutoCAD</h3>
+            <p>Instalación, soporte y optimización para proyectos técnicos.</p>
+          </article>
+
+          <!-- CHATGPT -->
+          <article class="tarjeta-herramienta">
+            <img src="AZChatGPT.png" alt="Ilustración de cerebro digital Inteligencia Artificial ChatGPT Alpha Zero" class="ilustracion-herramienta" loading="lazy">
+            <h3>ChatGPT</h3>
+            <p>Automatización de tareas y asistencia mediante IA.</p>
+          </article>
+
+          <!-- GEMINI -->
+          <article class="tarjeta-herramienta">
+            <img src="AZGemini.png" alt="Ilustración de cristal futurista Gemini IA Alpha Zero" class="ilustracion-herramienta" loading="lazy">
+            <h3>Gemini</h3>
+            <p>Apoyo creativo y generación de contenido mediante inteligencia artificial.</p>
+          </article>
+
+          <!-- ANYDESK Y RUSTDESK -->
+          <article class="tarjeta-herramienta">
+            <img src="AZRemoteDesk.png" alt="Ilustración de conexión remota AnyDesk y RustDesk Alpha Zero" class="ilustracion-herramienta" loading="lazy">
+            <h3>AnyDesk y RustDesk</h3>
+            <p>Soporte remoto seguro y asistencia técnica en tiempo real.</p>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- SECCIÓN CÓMO TRABAJAMOS -->
+      <section id="proceso" class="seccion-contenedor">
+        <h2 class="titulo-seccion">¿Cómo Trabajamos?</h2>
+        <p class="subtitulo-seccion">Un proceso simple, transparente y enfocado en tu satisfacción.</p>
+
+        <img src="AZServicios.png" alt="Pasos del flujo de trabajo remoto de Alpha Zero" class="imagen-banner-seccion" loading="lazy">
+
+        <div class="contenedor-proceso-html">
+          <article class="paso-proceso-card">
+            <h4>1. Contacto</h4>
+            <p>Escríbenos contando tu problema o la solución requerida.</p>
+          </article>
+
+          <article class="paso-proceso-card">
+            <h4>2. Diagnóstico</h4>
+            <p>Evaluamos el caso y brindamos un plan claro sin costo.</p>
+          </article>
+
+          <article class="paso-proceso-card">
+            <h4>3. Conexión Remota</h4>
+            <p>Nos conectamos de forma 100% distante y totalmente segura.</p>
+          </article>
+
+          <article class="paso-proceso-card">
+            <h4>4. Solución</h4>
+            <p>Ejecutamos el trabajo técnico con precisión y rapidez.</p>
+          </article>
+
+          <article class="paso-proceso-card">
+            <h4>5. Entrega</h4>
+            <p>Verificas el resultado final e inicias con total garantía.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- SECCIÓN POR QUÉ ELEGIRNOS -->
+      <section id="ventajas" class="seccion-contenedor">
+        <h2 class="titulo-seccion">¿Por Qué Elegir Alpha Zero?</h2>
+        <p class="subtitulo-seccion">La diferencia entre un técnico tradicional y una empresa tecnológica de vanguardia.</p>
+
+        <div class="grid-ventajas">
+          <article class="tarjeta-ventaja">
+            <h3>Atención Personalizada</h3>
+            <p>Trato directo y explicaciones claras sin modismos técnicos confusos.</p>
+          </article>
+          <article class="tarjeta-ventaja">
+            <h3>Soluciones Rápidas</h3>
+            <p>Respuesta inmediata para minimizar el tiempo de inactividad de tu equipo.</p>
+          </article>
+          <article class="tarjeta-ventaja">
+            <h3>Trabajo Remoto</h3>
+            <p>Sin moverte de casa o tu oficina, desde cualquier parte del mundo.</p>
+          </article>
+          <article class="tarjeta-ventaja">
+            <h3>Tecnología Moderna</h3>
+            <p>Uso de métodos y herramientas de última generación en cada proceso.</p>
+          </article>
+          <article class="tarjeta-ventaja">
+            <h3>Eficiencia con IA</h3>
+            <p>Aprovechamos la Inteligencia Artificial para resolver problemas en tiempo récord.</p>
+          </article>
+          <article class="tarjeta-ventaja">
+            <h3>Transparencia Total</h3>
+            <p>Sabrás exactamente qué se hace y solo pagas al verificar el resultado.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- SECCIÓN RECURSOS -->
+      <section id="recursos" class="seccion-contenedor">
+        <h2 class="titulo-seccion">Recursos y Proyectos Futuros</h2>
+        <p class="subtitulo-seccion">Ampliamos nuestras herramientas constantemente para darte más valor.</p>
+        
+        <div style="background-color: #0b0b0f; border: 1px solid #1a1a24; border-radius: 12px; padding: 40px; text-align: center;">
+          <h3 style="color: #a855f7; margin-bottom: 10px; margin-top: 0; font-size: 18px;">Próximamente</h3>
+          <p style="margin-bottom: 0;">Las plantillas de Excel avanzadas y el desarrollo de páginas web personalizadas son proyectos que implementaremos más tarde para brindar la máxima calidad posible.</p>
+        </div>
+      </section>
+
+      <!-- SECCIÓN DE CONTACTO & BANNER DE DESCARGA REMOTA -->
+      <section id="contacto" class="seccion-contacto">
+        
+        <!-- BANNER DE DESCARGA DE RUSTDESK -->
+        <div class="banner-descarga-remota">
+          <h3>Asistencia Remota Inmediata</h3>
+          <p>Para conectarnos a tu equipo de forma rápida y segura, descarga el programa oficial</p>
+          <a href="https://rustdesk.com/es/" target="_blank" rel="noopener" class="enlace-descarga" title="Descargar RustDesk para asistencia técnica">
+            Descarga aquí el programa para asistencia remota ↗
+          </a>
+        </div>
+
+        <h2 class="titulo-seccion">Inicia Tu Consulta</h2>
+        <p class="subtitulo-seccion">Elige el medio que prefieras para ponerte en contacto directo con nosotros.</p>
+        
+        <div class="botones-contacto-rapido">
+          <a href="https://wa.me/9982022465?text=Hola%20Alpha%20Zero,%20me%20interesa%20solicitar%20soporte%20t%C3%A9cnico%20remoto." 
+             target="_blank" 
+             rel="noopener"
+             class="btn-whatsapp" 
+             title="Enviar mensaje directo a WhatsApp">
+             Contactar por WhatsApp
+          </a>
+        </div>
+
+        <form class="formulario-contacto" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="13489000-46dc-4882-bc4f-4c58a66d8e0e">
+          <input type="hidden" name="subject" value="Nuevo mensaje de cliente - Alpha Zero">
+
+          <div class="grupo-input">
+            <label for="nombre">Tu Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ej. Mario" required autocomplete="name">
+          </div>
+          <div class="grupo-input">
+            <label for="correo">Correo Electrónico</label>
+            <input type="email" id="correo" name="email" placeholder="ejemplo@alphazero.com" required autocomplete="email">
+          </div>
+          <div class="grupo-input">
+            <label for="mensaje">¿En qué podemos ayudarte?</label>
+            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Describe brevemente el soporte técnico que necesitas..." required></textarea>
+          </div>
+          <button type="submit" class="btn-enviar">Solicitar Atención</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="pie-pagina">
+      <p class="lema-footer">De la A a la Z en soluciones tecnológicas.</p>
+      
+      <div class="links-footer">
+        <a href="#">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#herramientas">Herramientas</a>
+        <a href="#recursos">Recursos</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+
+      <div class="contenido-footer">
+        <p>&copy; 2026 Alpha Zero. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+      const navbar = document.getElementById('navbar');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 30) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      });
+
+      const menuToggle = document.getElementById('menuToggle');
+      const menuEnlaces = document.getElementById('menuEnlaces');
+
+      menuToggle.addEventListener('click', () => {
+        menuEnlaces.classList.toggle('active');
+      });
+
+      document.querySelectorAll('.menu-enlaces a').forEach(enlace => {
+        enlace.addEventListener('click', () => {
+          menuEnlaces.classList.remove('active');
+        });
+      });
+    </script>
+  </body>
+</html>
